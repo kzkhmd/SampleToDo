@@ -21,7 +21,7 @@ class ProjectsTableViewController: UIViewController {
         return dateFormatter
     }()
     
-    private var projectsList = ProjectsList()
+    private var projectsList = ProjectsList.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,24 @@ class ProjectsTableViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = editButton
         
         self.tableView.register(UINib(nibName: "ProjectTableViewCell", bundle: nil), forCellReuseIdentifier: "ProjectTableViewCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ProjectDetailViewSegue" {
+            let nextViewController = segue.destination as! ProjectDetailViewController
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                nextViewController.project = projectsList.projects[indexPath.row]
+            } else {
+                nextViewController.project = Project(projectName: "")
+            }
+        }
     }
     
     @objc func onTapAddButton(_ sender: UIBarButtonItem) {

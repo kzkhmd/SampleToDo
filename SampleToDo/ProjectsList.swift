@@ -8,18 +8,20 @@
 
 import Foundation
 
-struct ProjectsList {
+class ProjectsList {
+    
+    static let shared = ProjectsList()
+    
     var projects: [Project] = []
     
     
-    init() {
+    private init() {
         var project = Project(projectName: "Test")
         
         var task = Task(taskName: "ToDo")
         task.deadline = Date()
         
         project.tasks.append(task)
-        project.deadline = Date()
         
         self.projects.append(project)
     }

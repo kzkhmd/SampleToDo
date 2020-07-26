@@ -46,8 +46,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oma-Bn-PI4">
-                                <rect key="frame" x="342" y="21" width="52" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oma-Bn-PI4">
+                                <rect key="frame" x="359" y="20" width="35" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="完了"/>
                                 <connections>
@@ -62,16 +62,28 @@
                                     <action selector="onTapCancelButton:" destination="2xS-8z-y93" eventType="touchUpInside" id="WAt-6g-a5d"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="プロジェクトタイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLQ-ji-LZf">
+                                <rect key="frame" x="20" y="253" width="374" height="51.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Oma-Bn-PI4" firstAttribute="top" secondItem="9fL-w4-QCc" secondAttribute="top" constant="20" id="Fa9-s5-s2J"/>
+                            <constraint firstItem="9fL-w4-QCc" firstAttribute="trailing" secondItem="TLQ-ji-LZf" secondAttribute="trailing" constant="20" id="7d5-vr-Wbu"/>
                             <constraint firstItem="9fL-w4-QCc" firstAttribute="trailing" secondItem="Oma-Bn-PI4" secondAttribute="trailing" constant="20" id="GUM-9c-pVm"/>
                             <constraint firstItem="HuA-hX-lZC" firstAttribute="top" secondItem="9fL-w4-QCc" secondAttribute="top" constant="20" id="GY2-9p-PD1"/>
+                            <constraint firstItem="TLQ-ji-LZf" firstAttribute="top" secondItem="HuA-hX-lZC" secondAttribute="bottom" constant="200" id="faK-Nz-qTB"/>
+                            <constraint firstItem="Oma-Bn-PI4" firstAttribute="top" secondItem="9fL-w4-QCc" secondAttribute="top" constant="20" id="hyJ-4j-Q1d"/>
+                            <constraint firstItem="TLQ-ji-LZf" firstAttribute="leading" secondItem="9fL-w4-QCc" secondAttribute="leading" constant="20" id="iqO-hI-wuH"/>
                             <constraint firstItem="HuA-hX-lZC" firstAttribute="leading" secondItem="9fL-w4-QCc" secondAttribute="leading" constant="20" id="zyJ-da-wIT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9fL-w4-QCc"/>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="Oma-Bn-PI4" id="HsS-4H-cYZ"/>
+                        <outlet property="projectNameTextField" destination="TLQ-ji-LZf" id="y0a-7e-vBS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-p0-tPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

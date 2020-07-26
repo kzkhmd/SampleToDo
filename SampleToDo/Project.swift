@@ -48,5 +48,6 @@ struct Project {
     
     init(projectName: String) {
         self.projectName = projectName
+        self.deadline = Date()
     }
 }
