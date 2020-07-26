@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Du-eh-5kJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Projects Table View Controller-->
+        <!--プロジェクト一覧-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ProjectsTableViewController" customModule="SampleToDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,13 +28,54 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="プロジェクト一覧" id="Bdd-Yn-aoB"/>
                     <connections>
                         <outlet property="tableView" destination="jFP-iJ-JZI" id="Wft-aa-LFb"/>
+                        <segue destination="2xS-8z-y93" kind="presentation" identifier="ProjectDetailViewSegue" id="i4o-41-lAW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Project Detail View Controller-->
+        <scene sceneID="Rp7-U3-aZv">
+            <objects>
+                <viewController id="2xS-8z-y93" customClass="ProjectDetailViewController" customModule="SampleToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DPg-If-jyh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oma-Bn-PI4">
+                                <rect key="frame" x="342" y="21" width="52" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="完了"/>
+                                <connections>
+                                    <action selector="onTapDoneButton:" destination="2xS-8z-y93" eventType="touchUpInside" id="Cz8-be-xAU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuA-hX-lZC">
+                                <rect key="frame" x="20" y="20" width="87" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="キャンセル"/>
+                                <connections>
+                                    <action selector="onTapCancelButton:" destination="2xS-8z-y93" eventType="touchUpInside" id="WAt-6g-a5d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Oma-Bn-PI4" firstAttribute="top" secondItem="9fL-w4-QCc" secondAttribute="top" constant="20" id="Fa9-s5-s2J"/>
+                            <constraint firstItem="9fL-w4-QCc" firstAttribute="trailing" secondItem="Oma-Bn-PI4" secondAttribute="trailing" constant="20" id="GUM-9c-pVm"/>
+                            <constraint firstItem="HuA-hX-lZC" firstAttribute="top" secondItem="9fL-w4-QCc" secondAttribute="top" constant="20" id="GY2-9p-PD1"/>
+                            <constraint firstItem="HuA-hX-lZC" firstAttribute="leading" secondItem="9fL-w4-QCc" secondAttribute="leading" constant="20" id="zyJ-da-wIT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9fL-w4-QCc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-p0-tPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028.985507246377" y="138.61607142857142"/>
         </scene>
         <!--Projects Collection View Controller-->
         <scene sceneID="LRW-do-hxG">
@@ -71,7 +112,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94m-Ub-rdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146.376811594203" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1048" y="841"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RrK-e7-2kV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Du-eh-5kJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7zX-33-0iA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xJh-D4-REj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R06-4t-Mkg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

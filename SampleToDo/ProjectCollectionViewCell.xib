@@ -63,12 +63,6 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="319" height="119"/>
-            <connections>
-                <outlet property="deadline" destination="3zt-Yc-t8R" id="8TK-uT-i8y"/>
-                <outlet property="progressRate" destination="S2s-bJ-aGx" id="7Ld-Jk-iuE"/>
-                <outlet property="projectName" destination="cWZ-2P-jhq" id="7g3-JR-bZj"/>
-                <outlet property="taskNumber" destination="Ua0-fD-AdL" id="Tkl-ZZ-B9o"/>
-            </connections>
             <point key="canvasLocation" x="215.21739130434784" y="96.09375"/>
         </collectionViewCell>
     </objects>

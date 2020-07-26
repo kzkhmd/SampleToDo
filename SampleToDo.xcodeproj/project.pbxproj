@@ -11,6 +11,10 @@
 		D40B233C24B98A43008AB211 /* ProjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40B233A24B98A43008AB211 /* ProjectCollectionViewCell.xib */; };
 		D45AEF4E24B9528E00C1A50D /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45AEF4C24B9528E00C1A50D /* ProjectTableViewCell.swift */; };
 		D45AEF4F24B9528E00C1A50D /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D45AEF4D24B9528E00C1A50D /* ProjectTableViewCell.xib */; };
+		D467BD8424CD135D00947928 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D467BD8324CD135D00947928 /* ProjectDetailViewController.swift */; };
+		D486C2DB24C974790095F7F0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486C2D824C974790095F7F0 /* Project.swift */; };
+		D486C2DC24C974790095F7F0 /* ProjectsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486C2D924C974790095F7F0 /* ProjectsList.swift */; };
+		D486C2DD24C974790095F7F0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486C2DA24C974790095F7F0 /* Task.swift */; };
 		D4CDED1D24A38545004AD226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDED1C24A38545004AD226 /* AppDelegate.swift */; };
 		D4CDED1F24A38545004AD226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDED1E24A38545004AD226 /* SceneDelegate.swift */; };
 		D4CDED2124A38545004AD226 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDED2024A38545004AD226 /* ProjectsTableViewController.swift */; };
@@ -25,6 +29,10 @@
 		D40B233A24B98A43008AB211 /* ProjectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectCollectionViewCell.xib; sourceTree = "<group>"; };
 		D45AEF4C24B9528E00C1A50D /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		D45AEF4D24B9528E00C1A50D /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
+		D467BD8324CD135D00947928 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		D486C2D824C974790095F7F0 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		D486C2D924C974790095F7F0 /* ProjectsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsList.swift; sourceTree = "<group>"; };
+		D486C2DA24C974790095F7F0 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		D4CDED1924A38545004AD226 /* SampleToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CDED1C24A38545004AD226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4CDED1E24A38545004AD226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +76,12 @@
 			children = (
 				D4CDED1C24A38545004AD226 /* AppDelegate.swift */,
 				D4CDED1E24A38545004AD226 /* SceneDelegate.swift */,
+				D486C2D824C974790095F7F0 /* Project.swift */,
+				D486C2D924C974790095F7F0 /* ProjectsList.swift */,
+				D486C2DA24C974790095F7F0 /* Task.swift */,
 				D4CDED2024A38545004AD226 /* ProjectsTableViewController.swift */,
 				D4DD884D24B9FC7300A71342 /* ProjectsCollectionViewController.swift */,
+				D467BD8324CD135D00947928 /* ProjectDetailViewController.swift */,
 				D45AEF4C24B9528E00C1A50D /* ProjectTableViewCell.swift */,
 				D45AEF4D24B9528E00C1A50D /* ProjectTableViewCell.xib */,
 				D40B233924B98A43008AB211 /* ProjectCollectionViewCell.swift */,
@@ -156,10 +168,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D40B233B24B98A43008AB211 /* ProjectCollectionViewCell.swift in Sources */,
+				D467BD8424CD135D00947928 /* ProjectDetailViewController.swift in Sources */,
 				D4CDED2124A38545004AD226 /* ProjectsTableViewController.swift in Sources */,
 				D4DD884E24B9FC7300A71342 /* ProjectsCollectionViewController.swift in Sources */,
+				D486C2DC24C974790095F7F0 /* ProjectsList.swift in Sources */,
 				D4CDED1D24A38545004AD226 /* AppDelegate.swift in Sources */,
 				D4CDED1F24A38545004AD226 /* SceneDelegate.swift in Sources */,
+				D486C2DB24C974790095F7F0 /* Project.swift in Sources */,
+				D486C2DD24C974790095F7F0 /* Task.swift in Sources */,
 				D45AEF4E24B9528E00C1A50D /* ProjectTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

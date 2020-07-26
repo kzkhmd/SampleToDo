@@ -9,11 +9,6 @@
 import UIKit
 
 class ProjectCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var projectName: UILabel!
-    @IBOutlet weak var deadline: UILabel!
-    @IBOutlet weak var progressRate: UILabel!
-    @IBOutlet weak var taskNumber: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

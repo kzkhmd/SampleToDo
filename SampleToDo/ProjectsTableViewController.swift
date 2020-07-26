@@ -12,12 +12,35 @@ class ProjectsTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        return dateFormatter
+    }()
     
-
+    private var projectsList = ProjectsList()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAddButton(_:)))
+        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(onTapEditButton(_:)))
+        
+        self.navigationItem.rightBarButtonItem = addButton
+        self.navigationItem.leftBarButtonItem = editButton
+        
         self.tableView.register(UINib(nibName: "ProjectTableViewCell", bundle: nil), forCellReuseIdentifier: "ProjectTableViewCell")
+    }
+    
+    @objc func onTapAddButton(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "ProjectDetailViewSegue", sender: nil)
+    }
+    
+    @objc func onTapEditButton(_ sender: UIBarButtonItem) {
+        print("EditButton tapped")
     }
 }
 
@@ -31,11 +54,17 @@ extension ProjectsTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return projectsList.projects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectTableViewCell") as! ProjectTableViewCell
+        let project = projectsList.projects[indexPath.row]
+        
+        cell.projectName.text   = project.projectName
+        cell.deadline.text      = dateFormatter.string(from: project.deadline!)
+        cell.progressRate.text  = String(project.progressRate)
+        cell.taskNumber.text    = String(project.allTaskNumber)
         
         return cell
     }
