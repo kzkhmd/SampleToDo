@@ -23,6 +23,11 @@ class ProjectsList {
         
         project.tasks.append(task)
         
+        var task2 = Task(taskName: "Test")
+        task2.deadline = Date()
+        
+        project.tasks.append(task2)
+        
         self.projects.append(project)
     }
 }

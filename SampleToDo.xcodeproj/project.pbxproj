@@ -22,6 +22,9 @@
 		D4CDED2624A3854B004AD226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CDED2524A3854B004AD226 /* Assets.xcassets */; };
 		D4CDED2924A3854B004AD226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4CDED2724A3854B004AD226 /* LaunchScreen.storyboard */; };
 		D4DD884E24B9FC7300A71342 /* ProjectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD884D24B9FC7300A71342 /* ProjectsCollectionViewController.swift */; };
+		D4E01DC724D64D0A00F7C4BF /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E01DC624D64D0A00F7C4BF /* TasksTableViewController.swift */; };
+		D4E01DCA24D650F800F7C4BF /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E01DC824D650F800F7C4BF /* TaskTableViewCell.swift */; };
+		D4E01DCB24D650F800F7C4BF /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4E01DC924D650F800F7C4BF /* TaskTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		D4CDED2824A3854B004AD226 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4CDED2A24A3854B004AD226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4DD884D24B9FC7300A71342 /* ProjectsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsCollectionViewController.swift; sourceTree = "<group>"; };
+		D4E01DC624D64D0A00F7C4BF /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
+		D4E01DC824D650F800F7C4BF /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		D4E01DC924D650F800F7C4BF /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 				D45AEF4D24B9528E00C1A50D /* ProjectTableViewCell.xib */,
 				D40B233924B98A43008AB211 /* ProjectCollectionViewCell.swift */,
 				D40B233A24B98A43008AB211 /* ProjectCollectionViewCell.xib */,
+				D4E01DC624D64D0A00F7C4BF /* TasksTableViewController.swift */,
+				D4E01DC824D650F800F7C4BF /* TaskTableViewCell.swift */,
+				D4E01DC924D650F800F7C4BF /* TaskTableViewCell.xib */,
 				D4CDED2224A38545004AD226 /* Main.storyboard */,
 				D4CDED2524A3854B004AD226 /* Assets.xcassets */,
 				D4CDED2724A3854B004AD226 /* LaunchScreen.storyboard */,
@@ -152,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E01DCB24D650F800F7C4BF /* TaskTableViewCell.xib in Resources */,
 				D4CDED2924A3854B004AD226 /* LaunchScreen.storyboard in Resources */,
 				D4CDED2624A3854B004AD226 /* Assets.xcassets in Resources */,
 				D4CDED2424A38545004AD226 /* Main.storyboard in Resources */,
@@ -168,12 +178,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D40B233B24B98A43008AB211 /* ProjectCollectionViewCell.swift in Sources */,
+				D4E01DC724D64D0A00F7C4BF /* TasksTableViewController.swift in Sources */,
 				D467BD8424CD135D00947928 /* ProjectDetailViewController.swift in Sources */,
 				D4CDED2124A38545004AD226 /* ProjectsTableViewController.swift in Sources */,
 				D4DD884E24B9FC7300A71342 /* ProjectsCollectionViewController.swift in Sources */,
 				D486C2DC24C974790095F7F0 /* ProjectsList.swift in Sources */,
 				D4CDED1D24A38545004AD226 /* AppDelegate.swift in Sources */,
 				D4CDED1F24A38545004AD226 /* SceneDelegate.swift in Sources */,
+				D4E01DCA24D650F800F7C4BF /* TaskTableViewCell.swift in Sources */,
 				D486C2DB24C974790095F7F0 /* Project.swift in Sources */,
 				D486C2DD24C974790095F7F0 /* Task.swift in Sources */,
 				D45AEF4E24B9528E00C1A50D /* ProjectTableViewCell.swift in Sources */,

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--プロジェクト一覧-->
+        <!--Projects-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ProjectsTableViewController" customModule="SampleToDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFP-iJ-JZI">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFP-iJ-JZI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="wrT-9l-NWd"/>
@@ -26,12 +25,19 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jFP-iJ-JZI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5yH-Sh-m0b"/>
+                            <constraint firstItem="jFP-iJ-JZI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HQX-AS-brG"/>
+                            <constraint firstItem="jFP-iJ-JZI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pej-cB-A6V"/>
+                            <constraint firstItem="jFP-iJ-JZI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rfS-Q9-yza"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="プロジェクト一覧" id="Bdd-Yn-aoB"/>
+                    <navigationItem key="navigationItem" title="Projects" id="Bdd-Yn-aoB"/>
                     <connections>
                         <outlet property="tableView" destination="jFP-iJ-JZI" id="Wft-aa-LFb"/>
                         <segue destination="2xS-8z-y93" kind="presentation" identifier="ProjectDetailViewSegue" id="i4o-41-lAW"/>
+                        <segue destination="SMu-mw-TdZ" kind="show" identifier="TasksTableViewSegue" id="OxF-5Q-rRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-p0-tPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028.985507246377" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1914" y="-632"/>
         </scene>
         <!--Projects Collection View Controller-->
         <scene sceneID="LRW-do-hxG">
@@ -125,6 +131,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94m-Ub-rdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="841"/>
+        </scene>
+        <!--Tasks Table View Controller-->
+        <scene sceneID="Bf3-gL-s3R">
+            <objects>
+                <viewController id="SMu-mw-TdZ" customClass="TasksTableViewController" customModule="SampleToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1C-xj-ygm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bOS-nG-fOk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bOS-nG-fOk" firstAttribute="top" secondItem="Ybf-hv-ObL" secondAttribute="top" id="ONR-4z-c14"/>
+                            <constraint firstItem="bOS-nG-fOk" firstAttribute="trailing" secondItem="Ybf-hv-ObL" secondAttribute="trailing" id="VTY-2s-11b"/>
+                            <constraint firstItem="bOS-nG-fOk" firstAttribute="bottom" secondItem="Ybf-hv-ObL" secondAttribute="bottom" id="fG4-Gr-cou"/>
+                            <constraint firstItem="bOS-nG-fOk" firstAttribute="leading" secondItem="Ybf-hv-ObL" secondAttribute="leading" id="mPU-vs-AMo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ybf-hv-ObL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ps2-fj-dRd"/>
+                    <connections>
+                        <outlet property="tableView" destination="bOS-nG-fOk" id="xsG-Zn-P3J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWd-BZ-lAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911.594202898551" y="138.61607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RrK-e7-2kV">

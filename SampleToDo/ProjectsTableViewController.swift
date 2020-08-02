@@ -51,6 +51,13 @@ class ProjectsTableViewController: UIViewController {
                 nextViewController.project = Project(projectName: "")
             }
         }
+        else if segue.identifier == "TasksTableViewSegue" {
+            let nextViewController = segue.destination as! TasksTableViewController
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                nextViewController.project = projectsList.projects[indexPath.row]
+            }
+        }
     }
     
     @objc func onTapAddButton(_ sender: UIBarButtonItem) {
@@ -98,6 +105,9 @@ extension ProjectsTableViewController: UITableViewDataSource {
 
 extension ProjectsTableViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "TasksTableViewSegue", sender: nil)
+    }
     
 }
 
