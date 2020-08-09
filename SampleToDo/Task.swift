@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Task {
-    var taskName: String
-    var deadline: Date?
+class Task {
+    var name: String
+    var deadline: Date = Date()
     var isFinished: Bool = false
     
-    init(taskName: String) {
-        self.taskName = taskName
+    init(name: String) {
+        self.name = name
     }
 }

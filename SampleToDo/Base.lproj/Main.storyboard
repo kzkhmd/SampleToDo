@@ -68,7 +68,7 @@
                                     <action selector="onTapCancelButton:" destination="2xS-8z-y93" eventType="touchUpInside" id="WAt-6g-a5d"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="プロジェクトタイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLQ-ji-LZf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLQ-ji-LZf">
                                 <rect key="frame" x="20" y="253" width="374" height="51.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -94,6 +94,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-p0-tPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1914" y="-632"/>
+        </scene>
+        <!--Task Detail View Controller-->
+        <scene sceneID="ssm-IE-HkH">
+            <objects>
+                <viewController id="NjP-fA-2CC" customClass="TaskDetailViewController" customModule="SampleToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W1a-SL-wSh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kp-EY-wV6">
+                                <rect key="frame" x="20" y="20" width="87" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="キャンセル"/>
+                                <connections>
+                                    <action selector="onTapCancelButton:" destination="2xS-8z-y93" eventType="touchUpInside" id="TK1-22-GV8"/>
+                                    <action selector="onTapCancelButton:" destination="NjP-fA-2CC" eventType="touchUpInside" id="d4q-aA-XTz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHt-or-9mT">
+                                <rect key="frame" x="359" y="20" width="35" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="完了"/>
+                                <connections>
+                                    <action selector="onTapDoneButton:" destination="2xS-8z-y93" eventType="touchUpInside" id="4Mh-Wv-cw0"/>
+                                    <action selector="onTapDoneButton:" destination="NjP-fA-2CC" eventType="touchUpInside" id="NPf-K3-bih"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fN-nf-nEx">
+                                <rect key="frame" x="20" y="253" width="374" height="51.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9kp-EY-wV6" firstAttribute="leading" secondItem="y8f-1r-IkY" secondAttribute="leading" constant="20" id="GU9-Mi-QOm"/>
+                            <constraint firstItem="6fN-nf-nEx" firstAttribute="leading" secondItem="y8f-1r-IkY" secondAttribute="leading" constant="20" id="OWo-ib-jeB"/>
+                            <constraint firstItem="9kp-EY-wV6" firstAttribute="top" secondItem="y8f-1r-IkY" secondAttribute="top" constant="20" id="RgR-Kk-p6A"/>
+                            <constraint firstItem="y8f-1r-IkY" firstAttribute="trailing" secondItem="6fN-nf-nEx" secondAttribute="trailing" constant="20" id="Sup-Ak-n0o"/>
+                            <constraint firstItem="y8f-1r-IkY" firstAttribute="trailing" secondItem="KHt-or-9mT" secondAttribute="trailing" constant="20" id="aEz-dP-NNM"/>
+                            <constraint firstItem="KHt-or-9mT" firstAttribute="top" secondItem="y8f-1r-IkY" secondAttribute="top" constant="20" id="j9G-wx-G6h"/>
+                            <constraint firstItem="6fN-nf-nEx" firstAttribute="top" secondItem="9kp-EY-wV6" secondAttribute="bottom" constant="200" id="vlM-IJ-nTN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y8f-1r-IkY"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="KHt-or-9mT" id="9wF-nI-D9H"/>
+                        <outlet property="taskName" destination="6fN-nf-nEx" id="8Ck-s1-70g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s81-2F-29b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2825" y="-632"/>
         </scene>
         <!--Projects Collection View Controller-->
         <scene sceneID="LRW-do-hxG">
@@ -157,6 +210,7 @@
                     <navigationItem key="navigationItem" id="ps2-fj-dRd"/>
                     <connections>
                         <outlet property="tableView" destination="bOS-nG-fOk" id="xsG-Zn-P3J"/>
+                        <segue destination="NjP-fA-2CC" kind="presentation" identifier="TaskDetailViewSegue" id="QT0-ua-SvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWd-BZ-lAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -23,6 +23,7 @@ class ProjectsTableViewController: UIViewController {
     
     private var projectsList = ProjectsList.shared
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,16 +47,13 @@ class ProjectsTableViewController: UIViewController {
             let nextViewController = segue.destination as! ProjectDetailViewController
             
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                nextViewController.project = projectsList.projects[indexPath.row]
-            } else {
-                nextViewController.project = Project(projectName: "")
+                nextViewController.project = self.projectsList.projects[indexPath.row]
             }
-        }
-        else if segue.identifier == "TasksTableViewSegue" {
+        } else if segue.identifier == "TasksTableViewSegue" {
             let nextViewController = segue.destination as! TasksTableViewController
             
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                nextViewController.project = projectsList.projects[indexPath.row]
+                nextViewController.project = self.projectsList.projects[indexPath.row]
             }
         }
     }
@@ -86,16 +84,12 @@ extension ProjectsTableViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectTableViewCell") as! ProjectTableViewCell
         let project = projectsList.projects[indexPath.row]
         
-        cell.projectName.text   = project.projectName
+        cell.projectName.text   = project.name
         cell.deadline.text      = dateFormatter.string(from: project.deadline!)
         cell.progressRate.text  = String(project.progressRate)
         cell.taskNumber.text    = String(project.allTaskNumber)
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
     }
     
 }
@@ -105,8 +99,19 @@ extension ProjectsTableViewController: UITableViewDataSource {
 
 extension ProjectsTableViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "TasksTableViewSegue", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.projectsList.projects.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
 }

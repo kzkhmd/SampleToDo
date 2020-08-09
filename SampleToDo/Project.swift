@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Project {
-    var projectName: String
+class Project {
+    var name: String
     
     var deadline: Date?
     
@@ -46,8 +46,8 @@ struct Project {
     var tasks: [Task] = []
     
     
-    init(projectName: String) {
-        self.projectName = projectName
+    init(name: String) {
+        self.name = name
         self.deadline = Date()
     }
 }

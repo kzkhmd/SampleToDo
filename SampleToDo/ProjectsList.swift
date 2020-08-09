@@ -16,14 +16,14 @@ class ProjectsList {
     
     
     private init() {
-        var project = Project(projectName: "Test")
+        let project = Project(name: "Test")
         
-        var task = Task(taskName: "ToDo")
+        let task = Task(name: "ToDo")
         task.deadline = Date()
         
         project.tasks.append(task)
         
-        var task2 = Task(taskName: "Test")
+        let task2 = Task(name: "Test")
         task2.deadline = Date()
         
         project.tasks.append(task2)

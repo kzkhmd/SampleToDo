@@ -1,29 +1,28 @@
 //
-//  ProjectDetailViewController.swift
+//  TaskDetailViewController.swift
 //  SampleToDo
 //
-//  Created by 濱田一輝 on 2020/07/26.
+//  Created by 濱田一輝 on 2020/08/02.
 //  Copyright © 2020 Kazuki Hamada. All rights reserved.
 //
 
 import UIKit
 
-
-class ProjectDetailViewController: UIViewController {
+class TaskDetailViewController: UIViewController {
     
     @IBOutlet weak var doneButton: UIButton!
     
-    @IBOutlet weak var projectNameTextField: UITextField!
+    @IBOutlet weak var taskName: UITextField!
     
-    private var projectList = ProjectsList.shared
+    var project: Project!
     
-    var project: Project?
+    var task: Task?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.projectNameTextField.addTarget(self, action: #selector(textFieldDidChanged(sender:)), for: .editingChanged)
+        self.taskName.addTarget(self, action: #selector(textFieldDidChanged(sender:)), for: .editingChanged)
         
         self.doneButton.isEnabled = false
     }
@@ -31,8 +30,8 @@ class ProjectDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let project = self.project {
-            self.projectNameTextField.text = project.name
+        if let task = self.task {
+            self.taskName.text = task.name
         }
     }
     
@@ -44,10 +43,10 @@ class ProjectDetailViewController: UIViewController {
     }
     
     @IBAction func onTapDoneButton(_ sender: Any) {
-        if let project = self.project {
-            project.name = self.projectNameTextField.text!
+        if let task = self.task {
+            task.name = self.taskName.text!
         } else {
-            self.projectList.projects.append( Project(name: self.projectNameTextField.text!) )
+            self.project.tasks.append( Task(name: self.taskName.text!) )
         }
         
         self.dismiss(animated: true, completion: nil)
@@ -60,7 +59,7 @@ class ProjectDetailViewController: UIViewController {
 }
 
 
-extension ProjectDetailViewController {
+extension TaskDetailViewController {
     
     @objc func textFieldDidChanged(sender: UITextField) {
         guard let text = sender.text else {
@@ -73,10 +72,5 @@ extension ProjectDetailViewController {
             self.doneButton.isEnabled = true
         }
     }
-}
-
-
-extension ProjectDetailViewController: UITextFieldDelegate {
-    
     
 }
