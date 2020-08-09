@@ -28,10 +28,12 @@ class ProjectsTableViewController: UIViewController {
         super.viewDidLoad()
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAddButton(_:)))
-        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(onTapEditButton(_:)))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        /* editButtonItemを使用すると、ボタンの名前が自動的にEdit⇄Doneで遷移する*/
+        let editButton = editButtonItem
         
-        self.navigationItem.rightBarButtonItem = addButton
-        self.navigationItem.leftBarButtonItem = editButton
+        self.navigationItem.rightBarButtonItem = editButton
+        self.toolbarItems = [flexibleSpace, addButton]
         
         self.tableView.register(UINib(nibName: "ProjectTableViewCell", bundle: nil), forCellReuseIdentifier: "ProjectTableViewCell")
     }
@@ -58,13 +60,17 @@ class ProjectsTableViewController: UIViewController {
         }
     }
     
-    @objc func onTapAddButton(_ sender: UIBarButtonItem) {
+    /* editButtonItemを押すと呼ばれる */
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        self.tableView.setEditing(editing, animated: animated)
+    }
+    
+    @objc func onTapAddButton(_ sender: Any) {
         self.performSegue(withIdentifier: "ProjectDetailViewSegue", sender: nil)
     }
     
-    @objc func onTapEditButton(_ sender: UIBarButtonItem) {
-        print("EditButton tapped")
-    }
 }
 
 
@@ -90,6 +96,11 @@ extension ProjectsTableViewController: UITableViewDataSource {
         cell.taskNumber.text    = String(project.allTaskNumber)
         
         return cell
+    }
+    
+    /* このメソッドを実装することで、並べ替えが可能になる */
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        self.projectsList.move(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
     
 }

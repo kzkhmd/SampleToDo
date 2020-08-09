@@ -30,4 +30,11 @@ class ProjectsList {
         
         self.projects.append(project)
     }
+    
+    func move(from sourceIndex: Int, to destinationIndex: Int) {
+        let sourceProject = self.projects[sourceIndex]
+        
+        self.projects.remove(at: sourceIndex)
+        self.projects.insert(sourceProject, at: destinationIndex)
+    }
 }

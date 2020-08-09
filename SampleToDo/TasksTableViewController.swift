@@ -30,8 +30,11 @@ class TasksTableViewController: UIViewController {
         super.viewDidLoad()
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAddButton(_:)))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let editButton = editButtonItem
         
-        self.navigationItem.rightBarButtonItem = addButton
+        self.navigationItem.rightBarButtonItem = editButton
+        self.toolbarItems = [flexibleSpace, addButton]
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -57,6 +60,12 @@ class TasksTableViewController: UIViewController {
         }
     }
     
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        self.tableView.setEditing(editing, animated: animated)
+    }
+    
     @objc func onTapAddButton(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "TaskDetailViewSegue", sender: nil)
     }
@@ -79,6 +88,10 @@ extension TasksTableViewController: UITableViewDataSource {
         cell.deadline.text = dateFormatter.string(from: task.deadline)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        self.project.move(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
     
 }

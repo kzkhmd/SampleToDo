@@ -50,4 +50,11 @@ class Project {
         self.name = name
         self.deadline = Date()
     }
+    
+    func move(from sourceIndex: Int, to destinationIndex: Int) {
+        let task = self.tasks[sourceIndex]
+        
+        self.tasks.remove(at: sourceIndex)
+        self.tasks.insert(task, at: destinationIndex)
+    }
 }
