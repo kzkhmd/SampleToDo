@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Task {
+class Task: Identifiable {
+    var id = UUID()
     var name: String
     var deadline: Date = Date()
     var isFinished: Bool = false
