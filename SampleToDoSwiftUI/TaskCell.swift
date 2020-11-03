@@ -24,12 +24,12 @@ struct TaskCell: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(task.name)
-                    .font(.title)
+                    .font(.title2)
                 
                 Text(dateFormatter.string(from: task.deadline))
                     .font(.subheadline)
+                    .foregroundColor(.gray)
             }
-            .padding()
             
             Spacer()
         }
