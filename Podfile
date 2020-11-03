@@ -6,6 +6,5 @@ target 'SampleToDo' do
   use_frameworks!
 
   # Pods for SampleToDo
-  pod 'RealmSwift'
 
 end

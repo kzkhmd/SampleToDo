@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5070A87CB8EBF843F87E4D66 /* Pods_SampleToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CF00E015FC6FE1FC8E00B8 /* Pods_SampleToDo.framework */; };
 		D40B233B24B98A43008AB211 /* ProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40B233924B98A43008AB211 /* ProjectCollectionViewCell.swift */; };
 		D40B233C24B98A43008AB211 /* ProjectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40B233A24B98A43008AB211 /* ProjectCollectionViewCell.xib */; };
 		D453DBBA24D6A31D0039D9FA /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453DBB924D6A31D0039D9FA /* TaskDetailViewController.swift */; };
@@ -17,6 +16,12 @@
 		D486C2DB24C974790095F7F0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486C2D824C974790095F7F0 /* Project.swift */; };
 		D486C2DC24C974790095F7F0 /* ProjectsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486C2D924C974790095F7F0 /* ProjectsList.swift */; };
 		D486C2DD24C974790095F7F0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486C2DA24C974790095F7F0 /* Task.swift */; };
+		D4B6A5902551217C007FDCBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6A58F2551217C007FDCBD /* AppDelegate.swift */; };
+		D4B6A5922551217C007FDCBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6A5912551217C007FDCBD /* SceneDelegate.swift */; };
+		D4B6A5942551217C007FDCBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6A5932551217C007FDCBD /* ContentView.swift */; };
+		D4B6A5962551217D007FDCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B6A5952551217D007FDCBD /* Assets.xcassets */; };
+		D4B6A5992551217D007FDCBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B6A5982551217D007FDCBD /* Preview Assets.xcassets */; };
+		D4B6A59C2551217D007FDCBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B6A59A2551217D007FDCBD /* LaunchScreen.storyboard */; };
 		D4CDED1D24A38545004AD226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDED1C24A38545004AD226 /* AppDelegate.swift */; };
 		D4CDED1F24A38545004AD226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDED1E24A38545004AD226 /* SceneDelegate.swift */; };
 		D4CDED2124A38545004AD226 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDED2024A38545004AD226 /* ProjectsTableViewController.swift */; };
@@ -41,6 +46,14 @@
 		D486C2D824C974790095F7F0 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		D486C2D924C974790095F7F0 /* ProjectsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsList.swift; sourceTree = "<group>"; };
 		D486C2DA24C974790095F7F0 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		D4B6A58D2551217C007FDCBD /* SampleToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B6A58F2551217C007FDCBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4B6A5912551217C007FDCBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D4B6A5932551217C007FDCBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D4B6A5952551217D007FDCBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4B6A5982551217D007FDCBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D4B6A59B2551217D007FDCBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4B6A59D2551217D007FDCBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CDED1924A38545004AD226 /* SampleToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CDED1C24A38545004AD226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4CDED1E24A38545004AD226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,15 +66,20 @@
 		D4E01DC624D64D0A00F7C4BF /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		D4E01DC824D650F800F7C4BF /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		D4E01DC924D650F800F7C4BF /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
-		E8CF00E015FC6FE1FC8E00B8 /* Pods_SampleToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D4B6A58A2551217C007FDCBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4CDED1624A38545004AD226 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5070A87CB8EBF843F87E4D66 /* Pods_SampleToDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,15 +89,37 @@
 		CA22B3E1F774EA847A842BBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E8CF00E015FC6FE1FC8E00B8 /* Pods_SampleToDo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4B6A58E2551217C007FDCBD /* SampleToDoSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6A58F2551217C007FDCBD /* AppDelegate.swift */,
+				D4B6A5912551217C007FDCBD /* SceneDelegate.swift */,
+				D4B6A5932551217C007FDCBD /* ContentView.swift */,
+				D4B6A5952551217D007FDCBD /* Assets.xcassets */,
+				D4B6A59A2551217D007FDCBD /* LaunchScreen.storyboard */,
+				D4B6A59D2551217D007FDCBD /* Info.plist */,
+				D4B6A5972551217D007FDCBD /* Preview Content */,
+			);
+			path = SampleToDoSwiftUI;
+			sourceTree = "<group>";
+		};
+		D4B6A5972551217D007FDCBD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6A5982551217D007FDCBD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		D4CDED1024A38545004AD226 = {
 			isa = PBXGroup;
 			children = (
 				D4CDED1B24A38545004AD226 /* SampleToDo */,
+				D4B6A58E2551217C007FDCBD /* SampleToDoSwiftUI */,
 				D4CDED1A24A38545004AD226 /* Products */,
 				F345DA2C1DDA68BD79DE1E5D /* Pods */,
 				CA22B3E1F774EA847A842BBE /* Frameworks */,
@@ -90,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				D4CDED1924A38545004AD226 /* SampleToDo.app */,
+				D4B6A58D2551217C007FDCBD /* SampleToDoSwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,13 +168,29 @@
 				31AFF153B1D02DAF9DDA9B47 /* Pods-SampleToDo.debug.xcconfig */,
 				5772DDE475BC7FCB746B376A /* Pods-SampleToDo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D4B6A58C2551217C007FDCBD /* SampleToDoSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4B6A5A02551217D007FDCBD /* Build configuration list for PBXNativeTarget "SampleToDoSwiftUI" */;
+			buildPhases = (
+				D4B6A5892551217C007FDCBD /* Sources */,
+				D4B6A58A2551217C007FDCBD /* Frameworks */,
+				D4B6A58B2551217C007FDCBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleToDoSwiftUI;
+			productName = SampleToDoSwiftUI;
+			productReference = D4B6A58D2551217C007FDCBD /* SampleToDoSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D4CDED1824A38545004AD226 /* SampleToDo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4CDED2D24A3854B004AD226 /* Build configuration list for PBXNativeTarget "SampleToDo" */;
@@ -142,7 +199,6 @@
 				D4CDED1524A38545004AD226 /* Sources */,
 				D4CDED1624A38545004AD226 /* Frameworks */,
 				D4CDED1724A38545004AD226 /* Resources */,
-				A4FD42B9254A2231A719A6FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,10 +215,13 @@
 		D4CDED1124A38545004AD226 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Kazuki Hamada";
 				TargetAttributes = {
+					D4B6A58C2551217C007FDCBD = {
+						CreatedOnToolsVersion = 12.1;
+					};
 					D4CDED1824A38545004AD226 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -182,11 +241,22 @@
 			projectRoot = "";
 			targets = (
 				D4CDED1824A38545004AD226 /* SampleToDo */,
+				D4B6A58C2551217C007FDCBD /* SampleToDoSwiftUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D4B6A58B2551217C007FDCBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B6A59C2551217D007FDCBD /* LaunchScreen.storyboard in Resources */,
+				D4B6A5992551217D007FDCBD /* Preview Assets.xcassets in Resources */,
+				D4B6A5962551217D007FDCBD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4CDED1724A38545004AD226 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,26 +295,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A4FD42B9254A2231A719A6FB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleToDo/Pods-SampleToDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleToDo/Pods-SampleToDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleToDo/Pods-SampleToDo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D4B6A5892551217C007FDCBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B6A5902551217C007FDCBD /* AppDelegate.swift in Sources */,
+				D4B6A5922551217C007FDCBD /* SceneDelegate.swift in Sources */,
+				D4B6A5942551217C007FDCBD /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4CDED1524A38545004AD226 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +331,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D4B6A59A2551217D007FDCBD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4B6A59B2551217D007FDCBD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		D4CDED2224A38545004AD226 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +358,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D4B6A59E2551217D007FDCBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SampleToDoSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = CNH8YYWFE2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SampleToDoSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kazukima9376.SampleToDoSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4B6A59F2551217D007FDCBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SampleToDoSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = CNH8YYWFE2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SampleToDoSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kazukima9376.SampleToDoSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D4CDED2B24A3854B004AD226 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -442,6 +559,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D4B6A5A02551217D007FDCBD /* Build configuration list for PBXNativeTarget "SampleToDoSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4B6A59E2551217D007FDCBD /* Debug */,
+				D4B6A59F2551217D007FDCBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4CDED1424A38545004AD226 /* Build configuration list for PBXProject "SampleToDo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
